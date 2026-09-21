@@ -7,6 +7,7 @@ interface PasswordGateProps {
 }
 
 export default function PasswordGate({ onSuccess }: PasswordGateProps) {
+  const [nombre, setNombre] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [cargando, setCargando] = useState(false);
@@ -15,10 +16,13 @@ export default function PasswordGate({ onSuccess }: PasswordGateProps) {
     e.preventDefault();
     setError("");
     setCargando(true);
-    const valido = await validarPasswordVendedor(password);
+    const resultado = await validarPasswordVendedor(password, nombre);
     setCargando(false);
-    if (valido) onSuccess();
-    else setError("Contraseña incorrecta.");
+    if (resultado.ok) {
+      onSuccess();
+    } else {
+      setError(resultado.mensaje || "Contraseña incorrecta.");
+    }
   }
 
   return (
@@ -30,13 +34,22 @@ export default function PasswordGate({ onSuccess }: PasswordGateProps) {
         </svg>
       </div>
       <h2>Acceso Vendedores</h2>
-      <p>Ingresa la contraseña para entrar al portal del vendedor.</p>
+      <p>Ingresa tu nombre y la contraseña para entrar al portal del vendedor.</p>
       <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          placeholder="Tu nombre"
+          value={nombre}
+          onChange={(e) => setNombre(e.target.value)}
+          required
+          style={{ marginBottom: "10px" }}
+        />
         <input
           type="password"
           placeholder="Contraseña"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+          required
         />
         {error && <p className="error-text">{error}</p>}
         <button type="submit" disabled={cargando}>

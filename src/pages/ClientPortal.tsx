@@ -19,7 +19,7 @@ export default function ClientPortal() {
         ))}
       </div>
       {catalogoActivo && (
-  <Modal titulo={catalogoActivo.titulo} onClose={cerrar} ancho="grande">
+  <Modal titulo={catalogoActivo.titulo} onClose={cerrar}>
     <PdfViewer url={catalogoActivo.urlPdf} />
   </Modal>
 )}

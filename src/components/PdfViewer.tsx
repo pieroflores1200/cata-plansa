@@ -8,7 +8,7 @@ export default function PdfViewer({ url }: PdfViewerProps) {
     <iframe
       src={url}
       title="Documento PDF"
-      style={{ width: "100%", height: "70vh", border: "none" }}
+      className="pdf-viewer-iframe"
     />
   );
 }

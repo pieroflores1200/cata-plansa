@@ -1,0 +1,328 @@
+body {
+  background-color: #ffffff;
+  color: #1f2937;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 32px;
+  border-bottom: 3px solid #16a34a;
+  background: #fff;
+}
+.navbar-brand { font-weight: 800; color: #0a2540; cursor: pointer; font-size: 18px; }
+.navbar-links { display: flex; gap: 10px; }
+
+.nav-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: #eef1f5;
+  color: #0a2540;
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.nav-pill:hover { background: #dde3ea; transform: translateY(-1px); }
+.nav-pill.active { background: #0a2540; color: #fff; }
+.nav-pill.active:hover { background: #0d2f52; }
+
+.nav-pill-icon { width: 14px; height: 14px; fill: currentColor; }
+
+.navbar-home {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #0a2540;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 8px 18px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.navbar-home:hover { background: #0d2f52; transform: translateY(-1px); }
+/* ===== Home ===== */
+.home-page { flex: 1; display: flex; flex-direction: column; align-items: center; text-align: center; padding: 60px 20px; }
+.home-logo { height: 60px; margin-bottom: 24px; }
+.home-page h1 { color: #0a2540; font-size: 40px; margin: 0 0 12px; }
+.home-subtitle { color: #6b7280; font-size: 18px; margin-bottom: 48px; }
+
+.profile-grid { display: flex; flex-wrap: wrap; gap: 32px; justify-content: center; max-width: 900px; }
+
+.profile-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 40px;
+  width: 320px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+  border: 1px solid #f3f4f6;
+  text-align: center;
+}
+.profile-card h3 { color: #0a2540; font-size: 22px; margin: 8px 0; }
+.profile-card p { color: #6b7280; font-size: 14px; margin-bottom: 16px; }
+.profile-card button { background: none; border: none; color: #16a34a; font-weight: 700; cursor: pointer; font-size: 15px; }
+
+.profile-icon {
+  width: 64px; height: 64px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 20px;
+}
+.profile-icon-vendedor { background: #0a2540; }
+.profile-icon-cliente { background: #16a34a; }
+.profile-icon-svg { width: 28px; height: 28px; fill: #ffffff; }
+
+/* ===== Footer ===== */
+.footer { text-align: center; padding: 24px; color: #6b7280; font-size: 13px; border-top: 1px solid #f3f4f6; margin-top: auto; }
+.footer p:first-child { color: #0a2540; font-weight: 600; }
+
+/* ===== Portales (Cliente / Vendedor) ===== */
+:root {
+  --brand-blue: #17539e;
+}                                                                                                                                                                            
+
+h1, h2, h3, h4 { color: var(--brand-blue); }
+
+.portal-page { flex: 1; padding: 40px 32px; text-align: center; }
+
+.portal-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+.portal-title-icon { font-size: 22px; }
+.portal-page > p { color: #6b7280; margin-bottom: 32px; }
+
+.tool-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  max-width: 780px;
+  margin: 0 auto;
+}
+.tool-card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 14px;
+  padding: 22px;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+}
+.tool-icon-box {
+  width: 40px; height: 40px; border-radius: 10px;
+  background: #eef2fb;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px; margin-bottom: 12px;
+}
+.tool-card h4 { font-size: 15px; margin: 0 0 6px; }
+.tool-card p { color: #6b7280; font-size: 13px; margin-bottom: 12px; }
+.tool-card button { background: none; border: none; color: #16a34a; font-weight: 700; cursor: pointer; padding: 0; font-size: 13px; }
+/* ===== Login vendedor ===== */
+.login-page { flex: 1; display: flex; align-items: center; justify-content: center; padding: 40px 20px; }
+.password-gate {
+  background: #fff; border: 1px solid #eee; border-radius: 16px;
+  padding: 40px; text-align: center; max-width: 380px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
+.password-logo { height: 40px; margin-bottom: 24px; }
+
+.password-icon {
+  width: 56px; height: 56px; background: #0a2540;
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 16px;
+}
+.password-icon-svg { width: 26px; height: 26px; fill: #ffffff; }
+.password-gate h2 { color: #0a2540; margin: 0 0 8px; }
+.password-gate p { color: #6b7280; font-size: 14px; margin-bottom: 20px; }
+.password-gate input {
+  width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; margin-bottom: 12px;
+}
+.password-gate button {
+  width: 100%; padding: 12px; background: #16a34a; color: #fff; border: none;
+  border-radius: 8px; font-weight: 700; cursor: pointer;
+}
+.error-text { color: #dc2626; font-size: 13px; margin-bottom: 10px; }
+.success-text { color: #16a34a; font-weight: 600; text-align: center; padding: 20px; }
+
+/* ===== Formularios dentro del modal ===== */
+.form { display: flex; flex-direction: column; gap: 6px; text-align: left; }
+.form label { font-size: 13px; font-weight: 600; color: #374151; margin-top: 8px; }
+.form input, .form select, .form textarea {
+  padding: 10px; border-radius: 8px; border: 1px solid #ddd; font-size: 14px;
+}
+.form button {
+  margin-top: 16px; padding: 12px; background: #0a2540; color: #fff;
+  border: none; border-radius: 8px; font-weight: 700; cursor: pointer;
+}
+/* ===== Hover en tarjetas ===== */
+.profile-card,
+.tool-card {
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+.profile-card:hover,
+.tool-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.1);
+}
+.profile-card button,
+.tool-card button {
+  transition: color 0.2s ease;
+}
+/* Color específico solo para el título principal del Home */
+.home-page h1 {
+  color: #0B3A74;
+}
+/* ===== Color fijo de títulos ===== */
+h1, h2, h3, h4 {
+  color: #0B3A74 !important;
+}
+
+/* ===== Navbar: logo + nombre ===== */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+.navbar-logo { height: 26px; }
+.navbar-brand-text { font-weight: 700; font-size: 15px; }
+.brand-dark { color: #0B3A74; }
+.brand-green { color: #16a34a; }
+
+/* ===== Tarjetas: reacción al pasar el mouse ===== */
+.tool-card {
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+.tool-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #0B3A74, #16a34a);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+.tool-card:hover::before {
+  transform: scaleX(1);
+}
+.tool-card:hover {
+  box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+  transform: translateY(-3px);
+}
+
+.tool-icon-box {
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+.tool-card:hover .tool-icon-box {
+  background: #16a34a;
+  filter: none;
+}
+/* ===== Línea inferior del navbar (degradado azul → verde) ===== */
+.navbar {
+  border-bottom: none;
+}
+.navbar-line {
+  height: 5px;
+  background: linear-gradient(90deg, #0B3A74, #16a34a);
+}
+
+/* ===== Íconos monocromáticos de catálogo/herramientas ===== */
+.tool-icon-box svg {
+  width: 20px;
+  height: 20px;
+  fill: #0B3A74;
+}
+.tool-card:hover .tool-icon-box svg {
+  fill: #ffffff;
+}
+.profile-card-link {
+  color: #16a34a;
+  font-weight: 700;
+  font-size: 15px;
+}
+.tool-card {
+  cursor: pointer;
+}
+.tool-card-link {
+  color: #16a34a;
+  font-weight: 700;
+  font-size: 13px;
+}
+/* ======================================================
+   RESPONSIVE — Tablet (≤ 768px)
+   ====================================================== */
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 12px 16px;
+  }
+  .navbar-brand-text { font-size: 13px; }
+  .navbar-links { gap: 8px; flex-wrap: wrap; }
+  .nav-pill, .navbar-home { padding: 6px 12px; font-size: 13px; }
+
+  .home-page h1 { font-size: 30px; }
+  .home-subtitle { font-size: 15px; margin-bottom: 32px; }
+
+  .profile-grid { flex-direction: column; align-items: center; }
+  .profile-card { width: 100%; max-width: 400px; padding: 28px; }
+
+  .portal-page { padding: 28px 16px; }
+  .tool-grid { grid-template-columns: 1fr; max-width: 100%; }
+
+  .password-gate { max-width: 100%; padding: 28px; }
+
+  .modal-content { max-width: 92vw; }
+}
+
+/* ======================================================
+   RESPONSIVE — Celular (≤ 480px)
+   ====================================================== */
+@media (max-width: 480px) {
+  .navbar {
+    justify-content: center;
+    text-align: center;
+  }
+  .navbar-brand { order: 1; }
+  .navbar-links { order: 2; justify-content: center; width: 100%; }
+  .navbar-home { order: 3; }
+
+  .home-logo { height: 44px; }
+  .home-page h1 { font-size: 24px; }
+  .home-subtitle { font-size: 14px; }
+
+  .profile-icon { width: 52px; height: 52px; }
+  .profile-icon-svg { width: 22px; height: 22px; }
+
+  .tool-card { padding: 18px; }
+  .tool-icon-box { width: 36px; height: 36px; }
+
+  .password-icon { width: 48px; height: 48px; }
+  .password-icon-svg { width: 22px; height: 22px; }
+
+  .modal-header { padding: 12px 16px; }
+  .modal-body { padding: 16px; }
+  .form input, .form select, .form textarea { font-size: 15px; } /* evita zoom automático en iOS */
+}

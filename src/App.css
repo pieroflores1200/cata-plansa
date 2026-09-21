@@ -326,3 +326,12 @@ h1, h2, h3, h4 {
   .modal-body { padding: 16px; }
   .form input, .form select, .form textarea { font-size: 15px; } /* evita zoom automático en iOS */
 }
+/* ===== Contenedor central con ancho máximo ===== */
+.main-content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
+  box-sizing: border-box;
+}

@@ -40,14 +40,3 @@
   border: none;
   display: block;
 }
-.pdf-viewer-mensaje {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  text-align: center;
-  color: #6b7280;
-  font-size: 15px;
-  padding: 40px;
-  line-height: 1.6;
-}
